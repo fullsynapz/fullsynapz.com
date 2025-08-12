@@ -1,7 +1,6 @@
 {
   "name": "fullsynapz",
   "homepage": "https://fullsynapz.gihub.io/fullsynapz.com",
-  "private": false,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
