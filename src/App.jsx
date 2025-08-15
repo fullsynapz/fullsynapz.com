@@ -1,13 +1,13 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './Components/Home/Home';
-import Navbar from './Components/NavBar/Navbar';
-import About from './Components/About/About';
+import Home from './Components/Home';
+import Navbar from './Components/NavBar';
+import About from './Components/About';
 import 'animate.css';
 import './App.css';
 import { WOW } from "wowjs";
-import Product from './Components/Products/Product';
-import Services from './Components/Services/Services';
-import Contact from './Components/Contact/Contact';
+import Product from './Components/Products';
+import Services from './Components/Services';
+import Contact from './Components/Contact';
 
 
 const App = () => {
