@@ -1,6 +1,6 @@
 import LogoIcon from '../../assets/logo.svg';
 
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
 const Navbar = ({ chaild }) => {
@@ -27,11 +27,16 @@ const Navbar = ({ chaild }) => {
         }
     }, [window.location.pathname]);
 
+    const navigation=useNavigate()
+
     return (
         <>
             <nav className="top-navbar">
                 <div className="logo">
-                    <img src={LogoIcon} alt="FullSynapz Logo" className="logo-img" />
+                    <img src={LogoIcon} alt="FullSynapz Logo" className="logo-img"  onClick={()=> {
+                        navigation('/')
+                        window.location.reload()
+                    }} style={{ cursor: "pointer" }}/>
                 </div>
                 <div className={`navbar-links-container ${isOpen ? "show" : ""}`}>
 
