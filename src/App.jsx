@@ -12,7 +12,7 @@ import Contact from './Components/Contact';
 
 const App = () => {
   return (
-    <Router basename='/fullsynapz.com'>
+    <Router>
       <Routes>
         <Route path="/" element={<Navbar chaild={<Home />} />} />
         <Route path="/about" element={<Navbar chaild={<About />} />} />
