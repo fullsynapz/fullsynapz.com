@@ -4,7 +4,7 @@ import Navbar from './Components/NavBar';
 import About from './Components/About';
 import 'animate.css';
 import './App.css';
-import { WOW } from "wowjs";
+// import { WOW } from "wowjs";
 import Product from './Components/Products';
 import Services from './Components/Services';
 import Contact from './Components/Contact';
