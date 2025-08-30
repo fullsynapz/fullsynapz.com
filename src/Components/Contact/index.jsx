@@ -18,7 +18,7 @@ const Contact = () => {
                 email,
                 message,
             };
-            if(name !=='' || phoneNumber !="" || email !=='' || message !==''){
+            if(name !=='' || phoneNumber !=="" || email !=='' || message !==''){
                 setErrorMessage("requirefieds missing !")
                 return
             }
