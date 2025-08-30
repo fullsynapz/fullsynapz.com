@@ -6,6 +6,7 @@ const Contact = () => {
     const [phoneNumber, setPhoneNumber] = useState("")
     const [email, setEmail] = useState('')
     const [message, setMessage] = useState('')
+    const [errorMessage,setErrorMessage]=useState("")
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -17,7 +18,10 @@ const Contact = () => {
                 email,
                 message,
             };
-
+            if(name !=='' || phoneNumber !="" || email !=='' || message !==''){
+                setErrorMessage("requirefieds missing !")
+                return
+            }
             const response = await fetch(
                 "https://fullsynapzbackend.onrender.com/emailSending",
                 {
@@ -66,6 +70,7 @@ const Contact = () => {
                 <div className="d-flex flex-column p-4 wow animate__animated  animate__fadeInUp mb-5">
                     <form onSubmit={handleSubmit}>
                         <h2 className="fs-20">Get in Touch</h2>
+                        <p style={{color:"red"}}>errorMessage</p>
 
                         <div className="mb-3">
                             <label htmlFor="name" className="form-label">Name</label>
