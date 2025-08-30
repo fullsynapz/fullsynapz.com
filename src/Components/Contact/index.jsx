@@ -35,6 +35,7 @@ const Contact = () => {
 
             const data = await response.json();
             console.log("Response:", data);
+            setErrorMessage(data.message)
 
             console.log("✅ Message sent successfully!");
             setName("");
@@ -42,6 +43,7 @@ const Contact = () => {
             setEmail("");
             setMessage("");
         } catch (error) {
+            setErrorMessage("error")
             console.error("Error:", error);
         }
     };
@@ -66,7 +68,7 @@ const Contact = () => {
                 <div className="d-flex flex-column p-4 wow animate__animated  animate__fadeInUp mb-5">
                     <form onSubmit={handleSubmit}>
                         <h2 className="fs-20">Get in Touch</h2>
-                        <p style={{color:"red"}}>errorMessage</p>
+                        <p style={{color:"red"}}>{errorMessage}</p>
 
                         <div className="mb-3">
                             <label htmlFor="name" className="form-label">Name</label>
