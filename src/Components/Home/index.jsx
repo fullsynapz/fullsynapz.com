@@ -11,12 +11,12 @@ const Home = () => {
         <>
             <div className="home-parent-container">
                 <div className="home-container d-flex flex-column justify-content-center align-items-center">
-                    <div className='align-items-center d-flex justify-content-center wow animate__animated animate__zoomInDown'>
+                    <div className='align-items-center d-flex justify-content-center  animate__animated animate__zoomInDown'>
                         <img src={FzLogo} alt="FullSynapz Logo" className='image-container' />
                     </div>
                     <div className="d-flex justify-content-center align-items-center gap-2 cotainer mt-3">
                         <span className="fs-26">Welcome to</span>
-                        <span className="wow animate__animated animate__bounce color-text fs-26">Synapz...</span>
+                        <span className=" animate__animated animate__bounce color-text fs-26">Synapz...</span>
                     </div>
                     <div className='d-flex justify-content-center align-items-center text-center'>
                         <span className='fs-20'>Turning Ideas into AI-Powered Solutions <br /> <span className='fs-20'>I build intelligent systems and scalable applications for businesses and individuals.</span></span>
@@ -25,11 +25,11 @@ const Home = () => {
                 <div className="container-fuild">
                     <div className="row d-flex justify-content-between ">
                         <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 ">
-                            <div className="container-fuild wow animate__animated  animate__fadeInLeft">
+                            <div className="container-fuild  animate__animated  animate__fadeInLeft">
                                 <img src={DashboardExplainLogo} alt="home-icon" className='image-container' />
                             </div>
                         </div>
-                        <div className="col-xl-7 col-lg-7 col-md-12 col-sm-12 col-12 d-flex flex-column mt-3 card-container-body wow animate__animated  animate__fadeInRight" >
+                        <div className="col-xl-7 col-lg-7 col-md-12 col-sm-12 col-12 d-flex flex-column mt-3 card-container-body  animate__animated  animate__fadeInRight" >
                             <h1 className="fs-26">Turning Ideas into AI-Powered & Data-Driven Solutions</h1>
                             <p className="fs-16">
                                 We are a freelance-driven tech startup specializing in delivering end-to-end solutions for:
@@ -48,7 +48,7 @@ const Home = () => {
 
                 <div className="container-fuild mt-5 mb-5">
                     <div className="row d-flex justify-content-between ">
-                        <div className="col-xl-7 col-lg-7 col-md-12 col-sm-12 col-12 d-flex flex-column mt-3 card-container-body wow animate__animated  animate__fadeInLeft">
+                        <div className="col-xl-7 col-lg-7 col-md-12 col-sm-12 col-12 d-flex flex-column mt-3 card-container-body  animate__animated  animate__fadeInLeft">
                             <h1 className="fs-26">Focusing Sectors</h1>
                             <p className="fs-16">
                                 At Synapz, we specialize in delivering end-to-end software solutions across all domains from AI, Full-Stack Development, and Power BI to custom projects for healthcare, education, business, and more.
@@ -64,7 +64,7 @@ const Home = () => {
                             <p className='fs-16'>Our goal is to empower every sector with innovative technology solutions that drive success and growth.</p>
                         </div>
                         <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 mt-3">
-                            <div className="container-fuild wow animate__animated  animate__fadeInRight">
+                            <div className="container-fuild  animate__animated  animate__fadeInRight">
                                 <img src={DashboardLogo2} alt="home-icon" className='image-container' />
                             </div>
                         </div>
@@ -74,11 +74,11 @@ const Home = () => {
                 <div className="container-fuild mt-5 mb-5">
                     <div className="row d-flex justify-content-between ">
                         <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 ">
-                            <div className="container-fuild wow animate__animated  animate__fadeInLeft">
+                            <div className="container-fuild  animate__animated  animate__fadeInLeft">
                                 <img src={DashboardLogo} alt="home-icon" className='image-container' />
                             </div>
                         </div>
-                        <div className="col-xl-7 col-lg-7 col-md-12 col-sm-12 col-12 d-flex flex-column mt-3 card-container-body wow animate__animated  animate__fadeInRight" >
+                        <div className="col-xl-7 col-lg-7 col-md-12 col-sm-12 col-12 d-flex flex-column mt-3 card-container-body  animate__animated  animate__fadeInRight" >
                             <h1 className="fs-26">Academic & Professional Project Support</h1>
                             <p className="fs-16">Whether you’re a student, a medical professional, or a business owner, Synapz is here to help you bring your ideas to life.
                                 We support all types of projects academic, industry focused, or personal and cover the full.</p>
@@ -93,7 +93,7 @@ const Home = () => {
                     </div>
                 </div>
                 <div className="container-fuild mt-3 mb-5">
-                    <div className="card-body-footer-container p-5 wow animate__animated  animate__fadeInUp">
+                    <div className="card-body-footer-container p-5  animate__animated  animate__fadeInUp">
                         <p className='fs-16 text-weight'>© 2024 FullSynapZ</p>
                         <div className="row">
                             <div className="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-xs-6 col-12 d-flex flex-column justify-content-center">

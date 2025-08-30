@@ -1,4 +1,52 @@
+import { useState } from "react";
+
 const Contact = () => {
+
+    const [name, setName] = useState('')
+    const [phoneNumber, setPhoneNumber] = useState("")
+    const [email, setEmail] = useState('')
+    const [message, setMessage] = useState('')
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        try {
+            const body = {
+                name,
+                phoneNumber,
+                email,
+                message,
+            };
+
+            const response = await fetch(
+                "https://fullsynapzbackend.onrender.com/emailSending",
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(body),
+                }
+            );
+
+            if (!response.ok) {
+                throw new Error("Failed to send message");
+            }
+
+            const data = await response.json();
+            console.log("Response:", data);
+
+            console.log("✅ Message sent successfully!");
+            setName("");
+            setPhoneNumber("");
+            setEmail("");
+            setMessage("");
+        } catch (error) {
+            console.error("Error:", error);
+        }
+    };
+
+
     return (
         <>
             <div className="d-flex flex-column">
@@ -16,30 +64,40 @@ const Contact = () => {
                 </div>
 
                 <div className="d-flex flex-column p-4 wow animate__animated  animate__fadeInUp mb-5">
-                    <h2 className="fs-20">Get in Touch</h2>
-                    <form>
+                    <form onSubmit={handleSubmit}>
+                        <h2 className="fs-20">Get in Touch</h2>
+
                         <div className="mb-3">
                             <label htmlFor="name" className="form-label">Name</label>
-                            <input type="text" className="form-control" id="name" placeholder="Your Name" required name="name" />
+                            <input type="text" className="form-control" id="name" placeholder="Your Name" required name="name" onChange={(e) => {
+                                setName(e.target.value)
+                            }} />
                         </div>
                         <div className="mb-3">
                             <label htmlFor="email" className="form-label">Email</label>
-                            <input type="email" className="form-control" id="email" placeholder="Your Email" required name="email" />
+                            <input type="email" className="form-control" id="email" placeholder="Your Email" required name="email" onChange={(e) => {
+                                setEmail(e.target.value)
+                            }} />
                         </div>
                         <div className="mb-3">
                             <label htmlFor="subject" className="form-label">Phone Number</label>
-                            <input type="text" className="form-control" id="phoneNumber" placeholder="Your Phone Number" required name="phoneNumber" />
+                            <input type="text" className="form-control" id="phoneNumber" placeholder="Your Phone Number" required name="phoneNumber"
+                                onChange={(e) => {
+                                    setPhoneNumber(e.target.value)
+                                }} />
                         </div>
                         <div className="mb-3">
                             <label htmlFor="message" className="form-label">Message</label>
-                            <textarea className="form-control" id="message" rows="4" placeholder="Your Message" required name="message"></textarea>
+                            <textarea className="form-control" id="message" rows="4" placeholder="Your Message" required name="message"
+                                onChange={(e) => {
+                                    setMessage(e.target.value)
+                                }}></textarea>
                         </div>
-                        <button type="submit" className="btn btn-primary">Send Message</button>
+                        <button type="submit" className="btn btn-primary" >Send Message</button>
                     </form>
 
                 </div>
-
-            </div>
+            </div >
         </>
     );
 }
