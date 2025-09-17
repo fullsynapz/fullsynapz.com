@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Tech208 from '../../assets/208Tech.png'
 
 const Services = () => {
@@ -58,7 +59,15 @@ const Services = () => {
                         208 Tech Careers is a platform dedicated to helping students and professionals in the tech industry find their dream jobs. We provide resources and career advice to empower individuals in their career journeys.
                     </p>
                     <p>
-                        @ 208 TechCareers - <a href="https://saikumar208techcareers.github.io/208techcareers.com/" target="_blank" rel="noopener noreferrer">https://saikumar208techcareers.github.io/208techcareers.com/</a>
+
+                        @ 208 TechCareers -  <a
+                            href="https://saikumar208techcareers.github.io/208techcareers.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Link to Web
+                        </a>
+
                     </p>
                 </div >
                 <div className="mt-3 d-flex flex-column align-items-center justify-content-center">
